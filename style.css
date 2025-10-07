@@ -129,6 +129,52 @@ h1 {
   font-weight: 400;
 }
 
+.cta-btn-styled {
+  margin: 20px auto;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  background: #080807;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+}
+
+.cta-btn-styled span {
+  color: #fff;
+  display: block;
+  position: relative;
+}
+
+/* White circle with black background (outline effect) */
+.cta-btn-styled::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Hover state - solid white circle */
+.cta-btn-styled:hover::after {
+  background: #fff;
+  border-color: #fff;
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   .parent {
@@ -214,5 +260,43 @@ h1 {
     font-weight: 500;
     color: #444;
     letter-spacing: 1px;
+  }
+}
+
+/* Large screen responsive design for big monitors */
+@media (min-width: 1200px) {
+  .parent {
+    margin: 40px;
+    gap: 30px;
+  }
+
+  .about-heading1 h1,
+  .about-heading2 h1 {
+    font-size: 96px;
+    line-height: 1.1;
+  }
+
+  .about-img-col img {
+    height: 350px;
+    max-width: 600px;
+  }
+
+  .architecture-content {
+    max-width: 1000px;
+    padding: 0 40px;
+  }
+
+  .architecture-content p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .about-2 {
+    gap: 30px;
+  }
+
+  .about-studio-col span {
+    font-size: 16px;
+    letter-spacing: 3px;
   }
 }
